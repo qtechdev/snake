@@ -11,7 +11,7 @@ window::window(int x, int y, int w, int h) {
 }
 
 window::~window() {
-  if (win != nullptr) {
+  if (win != nullptr && win != stdscr) {
     wclear(win);
     wrefresh(win);
     delwin(win);
