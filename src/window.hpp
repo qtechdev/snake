@@ -3,6 +3,20 @@
 
 #include <ncurses.h>
 
+class ncw {
+public:
+  ncw();
+  ~ncw();
+
+  // copy constructor/assignment
+  ncw(const ncw &other) = delete;
+  ncw &operator=(const ncw &other) = delete;
+
+  // move constructor/assignment
+  ncw(ncw &&other) = delete;
+  ncw &operator=(ncw &&other) = delete;
+};
+
 class window {
 public:
   window();
@@ -19,7 +33,7 @@ public:
 
   operator WINDOW *() const;
 private:
-  WINDOW *win;
+  WINDOW *win = nullptr;
 };
 
 #endif // __WINDOW_HPP__
