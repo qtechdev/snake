@@ -50,7 +50,7 @@ struct game_state {
 };
 
 int main() {
-  initscr();
+  ncw _;
   cbreak();
   noecho();
   curs_set(0);
@@ -215,7 +215,6 @@ int main() {
     }
   }
 
-  endwin();
   return 0;
 }
 

@@ -2,6 +2,14 @@
 
 #include "window.hpp"
 
+ncw::ncw() {
+  initscr();
+}
+
+ncw::~ncw() {
+  endwin();
+}
+
 window::window() {
   win = stdscr;
 }
